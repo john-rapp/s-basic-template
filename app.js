@@ -1,8 +1,8 @@
-const navbar = document.querySelector('nav');
-let lastScroll = 0;
+var navbar = document.querySelector('nav');
+var lastScroll = 0;
 
 window.onscroll = () => {
-  let currentY = window.pageYOffset;
+  var currentY = window.pageYOffset;
   if (lastScroll > currentY) {
     navbar.style.top = '0';
   } else {

@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #bf8444;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #bf8444;
+}
+
 body {
   background-color: #fff;
   font-family: 'Ubuntu';
@@ -15,7 +25,7 @@ body {
 nav {
   background-color: #fff;
   border-bottom: 1px solid #b9b9b9;
-  text-align: left;
+  text-align: center;
   transition: 0.3s;
 }
 
@@ -29,7 +39,6 @@ li {
   display: inline-block;
   padding: 10px;
   text-transform: uppercase;
-  padding-right: 25px;
 }
 
 li:hover {
@@ -42,12 +51,24 @@ h1 {
   font-size: 4em;
 }
 
-h3 {
+h2 {
   font-size: 1.2em;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 5%;
+  text-transform: uppercase;
 }
 
 .dark {
   background-color: #000436;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .half-width {
@@ -64,6 +85,12 @@ h3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('images/goat.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-text {
+  padding: 2%;
 }
 
 .light {
@@ -71,10 +98,6 @@ h3 {
 }
 
 .row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
   width: 100%;
   padding: 5% 10%;
 }
@@ -83,4 +106,30 @@ h3 {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  nav ul {
+    font-size: 0.9rem;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+
+  .fas {
+    padding-top: 10%;
+  }
+
+  .section-text {
+    order: 1;
+  }
+
+  .section-icon {
+    order: 2;
+  }
 }
